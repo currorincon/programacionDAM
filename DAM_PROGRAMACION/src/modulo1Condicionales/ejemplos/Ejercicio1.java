@@ -20,15 +20,15 @@ public class Ejercicio1 {
 		//numero1 = Util.pedirNumeroUsuario("Introduce un numero"); 
 		//numero2 = Util.pedirNumeroUsuario("Introduce otro"); 
 		
-//		numero1 = Util.pedirNumeroAleatorio();
-//		numero2 = Util.pedirNumeroAleatorio();
+		numero1 = Util.pedirNumeroAleatorio();
+		numero2 = Util.pedirNumeroAleatorio();
 		
 		
-		int min = Util.pedirNumeroUsuario("Dame el valor min del numero aletorio");
-		int max = Util.pedirNumeroUsuario("Ahora, dame el valor max del numero aletorio");
-
-		numero1 = Util.pedirNumeroAleatorioEntreDosNumeros(min,max);
-		numero2 = Util.pedirNumeroAleatorioEntreDosNumeros(min,max);
+//		int min = Util.pedirNumeroUsuario("Dame el valor min del numero aletorio");
+//		int max = Util.pedirNumeroUsuario("Ahora, dame el valor max del numero aletorio");
+//
+//		numero1 = Util.pedirNumeroAleatorioEntreDosNumeros(min,max);
+//		numero2 = Util.pedirNumeroAleatorioEntreDosNumeros(min,max);
 
 		System.out.println("El numero1 es: " + numero1);
 		System.out.println("El numero2 es: " + numero2);
