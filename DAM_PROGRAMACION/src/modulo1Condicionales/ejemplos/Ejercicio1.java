@@ -7,7 +7,26 @@ public class Ejercicio1 {
 
 	public static void main(String[] args) {
 		
-		comprobarNumero();
+		//comprobarNumero();
+		ejercicio1();
+	}
+	
+	public static void ejercicio1() {
+		
+		int acumulador =0;
+		int numero = 0;
+		
+		for(int i=0; i<4; i++) {
+			
+			numero = Util.pedirNumeroUsuario("dame un numero");
+			if(numero > 10)
+			{
+				acumulador = numero + acumulador;
+			}
+		}
+		
+		System.out.println("Los numeros mas de 10 suman: " + acumulador);
+		
 		
 	}
 	
