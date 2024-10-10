@@ -47,10 +47,18 @@ public class EjemplosIniciales {
 		
 		int tamanyo = 0;
 		
-		tamanyo = Util.pedirNumeroAleatorioEntreDosNumeros(3, 3);
+		tamanyo = Util.pedirNumeroUsuario("Dame cuantos elementos del array quieres");
 		
 		// Declaración del array, a través de la sentencia "new"
 		int numeros[] = new int[tamanyo];
+		
+		
+		for(int i=0;i<numeros.length;i++) {
+			numeros[i] = Util.pedirNumeroUsuario("Dame el elemento " + i + " que quieres añadir");	
+		}
+
+		Util.mostrarArray(numeros);
+		
 		int numerosCopiados[] = new int[numeros.length];
 					
 		Util.inicializarArrayConNumerosAleatorios(numeros, 0, 10);
