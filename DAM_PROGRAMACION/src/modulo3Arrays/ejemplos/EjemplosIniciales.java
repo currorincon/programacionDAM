@@ -21,16 +21,12 @@ public class EjemplosIniciales {
 		//tercerEjemploArray();
 		
 		int valor = 3;
+		
+		//ejemplo de retorno de un entero tipo INT
 		int valorMultiplicadoTRES = 0;
-		
-		if (false) {
-			System.out.println("Mi valor es par");
-		}else {
-			System.out.println("Mi valor es impar");
-		}
-		
 		valorMultiplicadoTRES = multiplicaTres(valor);
 			
+		System.out.println("Mi valor es " + valorMultiplicadoTRES);
 		
 	}
 
@@ -45,40 +41,62 @@ public class EjemplosIniciales {
 	 */
 	public static void primerEjemploArray () {
 		
-		int tamanyo = 0;
-		
-		tamanyo = Util.pedirNumeroUsuario("Dame cuantos elementos del array quieres");
-		
-		// Declaración del array, a través de la sentencia "new"
-		int numeros[] = new int[tamanyo];
-		
-		
-		for(int i=0;i<numeros.length;i++) {
-			numeros[i] = Util.pedirNumeroUsuario("Dame el elemento " + i + " que quieres añadir");	
-		}
+//		int tamanyo = 0;
+//		
+//		tamanyo = Util.pedirNumeroUsuario("Dame cuantos elementos del array quieres");
+//		
+//		// Declaración del array, a través de la sentencia "new"
+//		int numeros[] = new int[tamanyo];
+//		
+//		
+//		for(int i=0;i<numeros.length;i++) {
+//			numeros[i] = Util.pedirNumeroUsuario("Dame el elemento " + i + " que quieres añadir");	
+//		}
+//
+//		Util.mostrarArray(numeros);
+//		
+//		int numerosCopiados[] = new int[numeros.length];
+//					
+//		Util.inicializarArrayConNumerosAleatorios(numeros, 0, 10);
+//		Util.mostrarArray(numeros);
+//		
+//		numerosCopiados = Util.copiarArray(numeros);
+//		multiplicarPorDosArray(numerosCopiados);
+//		
+//		numeros = Util.copiarArray(numerosCopiados);
+//		
+//		System.out.println("\nEl array multiplicado x2:");
+//		Util.mostrarArray(numerosCopiados);
+//		System.out.println("\nY sin multiplicar x2:");
+//		Util.mostrarArray(numeros);
 
-		Util.mostrarArray(numeros);
 		
-		int numerosCopiados[] = new int[numeros.length];
-					
-		Util.inicializarArrayConNumerosAleatorios(numeros, 0, 10);
-		Util.mostrarArray(numeros);
+		int []valorConSigno = new int[5];
 		
-		numerosCopiados = Util.copiarArray(numeros);
-		multiplicarPorDosArray(numerosCopiados);
+		Util.inicializarArrayConNumerosAleatorios(valorConSigno, 0, 10);
 		
-		numeros = Util.copiarArray(numerosCopiados);
+		Util.mostrarArray(valorConSigno);
 		
-		System.out.println("\nEl array multiplicado x2:");
-		Util.mostrarArray(numerosCopiados);
-		System.out.println("\nY sin multiplicar x2:");
-		Util.mostrarArray(numeros);
-
+		cambiaSignoValores(valorConSigno);
+		
+		Util.mostrarArray(valorConSigno);
+		
+		
 		
 	//	Util.ordenarArray(numeros);
 //		System.out.println("\nEl array ordenado:");
 //		Util.mostrarArray(numeros);
 //		
+	}
+	
+	public static void cambiaSignoValores(int[]valor) {
+		
+		for(int i=0;i<valor.length;i++) {
+			valor[i] = valor[i] * -1;	
+		}
+		
+		
+		
 	}
 	
 	public static void multiplicarPorDosArray(int[] array) {
