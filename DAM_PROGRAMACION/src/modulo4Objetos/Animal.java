@@ -91,6 +91,8 @@ public abstract class Animal {
 				+ longitud + " longitud " + peso + " peso " +" y color " +
 				 color);
 		
+	
+		
 	}
 	
 
@@ -122,6 +124,7 @@ public abstract class Animal {
 	void atacar(){
 		
 	}
+	
 	
 	
 

@@ -1,15 +1,21 @@
 package modulo4Objetos.spaceInvader;
 
+import utils.Util;
+
 public abstract class Jugador {
 
-	private int puntosVida = 100;
-	private boolean estaVivo = true;
-	private int id;
+	protected int puntosVida = 100;
+	protected boolean estaVivo = true;
+	protected int id;
 	
 	Jugador() {
 		
 	}
-
+	
+	public abstract void recibirDisparo();
+	
+	 
+	
 	public int getPuntosVida() {
 		return puntosVida;
 	}

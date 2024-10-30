@@ -1,19 +1,61 @@
 package modulo2Bucles.ejemplos;
 
 import utils.Util;
+import utils.Utils;
 
 public class BucleFor {
 
 	public static void main(String[] args) {
 
+		Utils.obtenerCadena();
+		
 		//tabladeMultiplicar();
 		//numeroPrimo();
-		primoWhile();
+		//primoWhile();
 		
+		int cantidad = 5;	
+		
+		int [] myArray = new int[cantidad];
+		int [] myArrayInverso = new int[myArray.length];
+ 		
+		for(int i=0; i<cantidad;i++) {
+			myArray[i] = Utils.obtenerNumeroAzar(90, 100);
+				
+		}
+		
+		for(int i=0; i<cantidad;i++) {
+				System.out.println("El array "+ i +"  es: " + myArray[i]);
+		}
+		
+		int contador=0;
+		
+		for(int i=cantidad-1; i>=0;i--) {
+			myArrayInverso[contador] = myArray[i];
+			contador++;
+		}
+		
+		ejercicio1();
+		
+
 		
 	}
+	private static void ejercicio1() {
+		int numeroUsuario = 93;
+		int cantidad = 5;	
+		
+		int [] myArray = new int[cantidad];
+		int [] myArrayInverso = new int[myArray.length];
+ 		
+		for(int i=0; i<cantidad;i++) {
+			System.out.println("El array "+ i +"  es: " + myArrayInverso[i]);
+			if(numeroUsuario == myArrayInverso[i])
+			   System.out.println("Numero encontrado " + numeroUsuario);
+		}
+	}
+	
 	
 	private static void factorial() {
+		
 		
 		int numFactorial = Util.pedirNumeroUsuario("Dime cual quieres para factorial");
 		int resultado = 1;

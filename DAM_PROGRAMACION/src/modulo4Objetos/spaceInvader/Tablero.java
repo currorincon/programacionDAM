@@ -1,11 +1,18 @@
 package modulo4Objetos.spaceInvader;
 
 public class Tablero {
+	
+	public Humano [] humanos = new Humano[3];
+	public Invasor [] invasores = new Invasor[3];
 
-	public static void main(String[] args) {
-
-		Humano [] humanos = new Humano[100];
-		Invasor [] invasores = new Invasor[100];
+	public Tablero() {
+		
+		
+		
+	}
+	
+	
+	public void generarRivales() {
 
 		for(int i=0;i<humanos.length;i++) {
 			humanos[i] = new Humano(i);
@@ -18,16 +25,39 @@ public class Tablero {
 			System.out.println("Invasor "+ i +": "+invasores[i] );
 		}
 		
-		//Coger Invasor
-		//Dipara 
-		//veo si escudo o quito vida
-		//Cogo Humano
-		//Disparo
-		//Resto vida 
-		//REPITO HASTA QUE UNO DE LOS DOS TODOS MUERTOS
-		
-		
 		
 	}
+	
+	public void muestraEstadoActual() {
+		
+		for (int i = 0; i < humanos.length; i++) {
+			System.out.println(humanos[i] + " - ");
+		}
+		System.out.println();
+		for (int i = 0; i < invasores.length; i++) {
+			System.out.println(invasores[i] + " - ");
+		}
+		System.out.println("\n");
+	}
 
+	public Humano getPrimerHumanoVivo() {
+		for (int i = 0; i < humanos.length; i++) {
+			if (humanos[i].isEstaVivo() == true) {
+				return humanos[i];
+			}
+		}
+		return null;
+	}
+
+
+	public Invasor getPrimerMalvadoVivo() {
+		for (int i = 0; i < invasores.length; i++) {
+			if (invasores[i].isEstaVivo() == true) {
+				return invasores[i];
+			}
+		}
+		return null;
+	}
+
+	
 }
