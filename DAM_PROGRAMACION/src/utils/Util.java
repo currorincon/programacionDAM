@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Util {
 	
-	
+		
 	
 	/**
 	 * METODO PARA PEDIR un numero al usuario y se le pasa un mensaje
@@ -19,6 +19,16 @@ public class Util {
 		int numeroUsuario = sc.nextInt();
 		
 		return numeroUsuario; 
+	}
+	
+	public static String pedirStringUsuario(String msg) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println(msg);
+		
+		String stringUsuario = sc.nextLine();
+		
+		return stringUsuario; 
 	}
 
 	public static int pedirNumeroAleatorio() {
