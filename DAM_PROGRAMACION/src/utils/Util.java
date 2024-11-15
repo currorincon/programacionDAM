@@ -58,6 +58,15 @@ public class Util {
 		} 
 		
 	}
+	
+	public static void mostrarArrayCaracter(char [] array) {
+
+		// Recorrido del array para imprimir sus valores en pantalla
+		for (int i = 0; i < array.length; i++) {
+			System.out.print(array[i] + " ");
+		} 
+		
+	}
 
 	public static void inicializarArrayConValoresUsuario(int[] array) {
 		
@@ -83,6 +92,21 @@ public class Util {
 		}		
 	}
 
+	/**
+	 * Metodo para inicializar un Array con numeros aleatorios entre un limite max y min
+	 * 
+	 * @param array array para guardar los numeros
+	 * @param min numero inferior aleatorio
+	 * @param max numero maximo aleatorio
+	 */
+	public static void inicializarArrayConNumeroFijo(int[] array, int min) {
+				
+		// Inicialización de los valores del array con numeros aleatorios del 0 al 10 
+		for (int i = 0; i < array.length; i++) {
+			array[i] = min;
+		}		
+	}
+	
 	/**
 	 * Metodo para ordenar un array
 	 * @param Un array [numeros]
@@ -134,6 +158,27 @@ public class Util {
 			parImpar = true; 
 		}
 		return parImpar;
+	}
+	
+	public static boolean esPrimo(int valor) {
+		
+	
+		for(int i=2;i<valor;i++) {
+	        if(valor%i==0)
+	            return false;
+	    }
+	    return true;
+	
+	}
+
+	public static boolean estaNumeroArray(int i, int[] numeros) {
+		
+		for (int j = 0; j < numeros.length; j++) {
+			if (numeros[j] == i)
+				return true;
+		}
+		
+		return false;
 	}
 
 

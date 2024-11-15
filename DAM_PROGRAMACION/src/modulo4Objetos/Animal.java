@@ -19,14 +19,6 @@ public abstract class Animal {
 	private int id = Util.pedirNumeroAleatorioEntreDosNumeros(0,100000);
 	protected int velocidad =0; 
 	
-	
-	public String toString() {
-	
-		String identificar = "ID: " + id + "nombre: " + nombre;
-		return identificar;
-		
-	}
-	
 	/**
 	 * Metodo constructo de la clase Animal para crear un Animal con un nombre
 	 * @param nombre nombre que va a recibir el animal
@@ -54,6 +46,13 @@ public abstract class Animal {
 
 		
 	}
+	public String toString() {
+	
+		String identificar = "ID: " + id + "nombre: " + nombre;
+		return identificar;
+		
+	}
+
 	
 	public int getID() {
 		return this.id;
@@ -106,9 +105,7 @@ public abstract class Animal {
 		
 	}
 	
-	public void emitirSonido() {
-		System.out.println("ARGGG");
-	}
+	public abstract void emitirSonido();
 	
 	void andar() {
 		this.velocidad +=2;

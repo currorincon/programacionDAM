@@ -1,6 +1,6 @@
 package modulo4Objetos;
 
-public class Perro extends Animal {
+public class Perro extends Animal implements AnimalTerrestre,AnimalVolador {
 
 	private String raza = "";
 	private static String tipoAnimal = "Perro";
@@ -25,6 +25,25 @@ public class Perro extends Animal {
 	@Override
 	public void correr() {
 		super.velocidad += 10;
+	}
+
+	@Override
+	public void trotarYCorrer() {
+
+		
+		
+	}
+
+	@Override
+	public void vuelaAltoVuela() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void vuelaARasSuelo() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

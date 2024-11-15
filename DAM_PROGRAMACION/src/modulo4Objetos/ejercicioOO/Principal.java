@@ -6,11 +6,14 @@ import utils.Util;
 
 public class Principal {
 	
-	static int numeroPersonas = 3;
-	static Persona[] persona = new Persona[numeroPersonas];
+	
 
 	public static void main(String[] args) {
 
+		
+		int numeroPersonas = Util.pedirNumeroUsuario("Cuantas personas quieres");
+		Persona[] persona = new Persona[numeroPersonas];
+				
 		int opcion = 0;		
 		Scanner sc = new Scanner(System.in);
 		int nPersona = 0;
@@ -27,10 +30,12 @@ public class Principal {
 				System.out.println("Adios");
 				break;
 			case 1:
-				introducirDatos(nPersona);
+				if(nPersona != persona.length-1)
+					introducirDatos(nPersona, persona);
+				else System.out.println("No puedes introducir más personas");
 				break;
 			case 2:
-				mostrarDatos();
+				mostrarDatos(persona);
 				break;
 			default:
 				System.out.println("Opcion invalida");
@@ -39,7 +44,9 @@ public class Principal {
 			}
 			nPersona++;
 			
-		}while(opcion != 0 || nPersona < 3);
+		}while(opcion != 0 || nPersona == persona.length);
+		
+		sc.close();
 		
 	}
 	
@@ -47,14 +54,16 @@ public class Principal {
 	 * Muestra los datos de la persona
 	 * 
 	 */
-	private static void mostrarDatos() {
+	private static void mostrarDatos(Persona[] persona) {
 
 		System.out.println("Los datos:");
 
 		for(int i = 0; i<persona.length;i++) {
-			System.out.println("Nombre: " + persona[i].getNombre());
-			System.out.println("Edad: " + persona[i].getEdad());
-			System.out.println("Dni: " + persona[i].getDni());
+			  if(persona[i] != null) {
+				System.out.println("Nombre: " + persona[i].getNombre());
+				System.out.println("Edad: " + persona[i].getEdad());
+				System.out.println("Dni: " + persona[i].getDni());
+			  }	
 		}
 		
 
@@ -65,11 +74,12 @@ public class Principal {
 	 * Metodo para introducir los datos de la persona
 	 * 
 	 */
-	private static void introducirDatos(int nPersona) {
+	private static void introducirDatos(int nPersona, Persona[] persona) {
 		
 		String nombre = Util.pedirStringUsuario("Dame el nombre");
 		String dni = Util.pedirStringUsuario("Dame el dni");
 		int edad = Util.pedirNumeroUsuario("Dame tu edad");
+		
 		
 		persona[nPersona] = new Persona();		
 		persona[nPersona].setNombre(nombre);
