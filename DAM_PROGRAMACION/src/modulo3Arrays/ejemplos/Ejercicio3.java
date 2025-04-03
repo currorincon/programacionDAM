@@ -1,5 +1,7 @@
 package modulo3Arrays.ejemplos;
 
+import java.util.Scanner;
+
 import utils.Utils;
 
 public class Ejercicio3 {
@@ -12,6 +14,14 @@ public class Ejercicio3 {
 	 * Después de su inicialización debéis 
 	 * imprimir el array en orden inverso.	
 	 */
+		
+		
+	Scanner sc = new Scanner(System.in);
+	
+	String letra  = sc.next();
+	
+	System.out.println("Letra: "+letra);
+	
 		
 	int cantidad = 150;	
 	
