@@ -221,21 +221,10 @@ public class EjemploDaeCalendar {
 	
 	public static void main(String[] args) {
 		
-		EjemploExp exp = new EjemploExp();
-		
-		
-		try {
-			exp.llamameQueExploto(2);
-
-		}catch (Exception e) {
-				System.out.println("EXPLOTE");	
-				e.printStackTrace();
-				
-		}
-		
+	
 		//ejemploCreacionNormalDate();
 	//	ejemploFormateoFecha();
-//		ejemploCalendarBasico();
+		ejemploCalendarBasico();
 //		ejemploCalendarConCamposIndividualizados();
 	//	ejemploLecturaCamposIndividualizadosYLocaleEnImpresion();
 	//	ejemploSumaRestaFechas();
