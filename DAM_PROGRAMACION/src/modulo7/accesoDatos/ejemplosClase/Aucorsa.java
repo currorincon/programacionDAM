@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 
 public class Aucorsa {
@@ -20,22 +21,23 @@ public class Aucorsa {
 	}
 	        
 	
-	public void mostrarDatosAutobuses() throws SQLException {
+	public ArrayList<String> mostrarDatosAutobuses() throws SQLException {
 		
 		Statement stmt = c.createStatement(); 
+		
+		ArrayList<String> listaBuses = new ArrayList<String>();
 		
     	ResultSet rs = stmt.executeQuery("SELECT * FROM Bus");
     	
             while (rs.next()) {
-               System.out.println("Registros: " + rs.getString(1) 
-               		+ "\n Tipo: "  + rs.getString(2)
-               		+ "\n Licencia: "  + rs.getString(3) );
+            	listaBuses.add(rs.getString(1)); 
             }
+			return listaBuses;
 		
 		
 	}
 	
-	public void mostrarDatosAutobusesPorLicencia(String licencia) throws SQLException {
+	public String mostrarDatosAutobusesPorLicencia(String licencia) throws SQLException {
 		
 		Statement stmt = c.createStatement(); 
 		
@@ -50,8 +52,10 @@ public class Aucorsa {
                System.out.println("Registros: " + rs.getString(1) 
                		+ "\n Tipo: "  + rs.getString(2)
                		+ "\n Licencia: "  + rs.getString(3) );
+               return rs.getString(2);
             }
 		
+           return "";    
 		
 	}
 	
